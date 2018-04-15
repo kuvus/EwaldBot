@@ -33,7 +33,7 @@ class BotCommand(val bot: EwaldBot) : Command(
         eb.addField("Serwerów posiadających bota:", "${bot.jda.guilds.size}" , true )
         eb.addField("Ping bota:", "${bot.jda.ping}" , true )
         eb.setAuthor("EwaldBot", "https://xewald.pl/", "https://xewald.pl/Ewald.gif")
-        eb.setFooter("Data i godzina: $formatted", "https://xewald.pl/Ewald.gif")
+        eb.setTimestamp()
         channel.sendMessage(eb.build()).queue()
     }
 }
